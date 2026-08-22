@@ -16,15 +16,23 @@ void setup() {
   sCmd.addCommand("Opto_off",   BLED_off);         // Turns LED off
   sCmd.addCommand("servo",   servo);               // set servo position
   tapServo.attach(servoChannel); //attach pin X to servo motor
+  pinMode(blueChannel, OUTPUT);
+  pinMode(IRChannel,OUTPUT);
+  // set Optochannel to off
+  analogWrite(blueChannel, 255);
 
 }//end setup
 
 void loop() {
   // put your main code here, to run repeatedly:
-  sCmd.readSerial();     // We don't do much, just process serial commands
+  //sCmd.readSerial();     // We don't do much, just process serial commands
   potValue = analogRead(potChannel);
   IRValue = map(potValue,0,1023,0,255);
   analogWrite(IRChannel,IRValue);
+  analogWrite(blueChannel, 255);
+  delay(500);
+  analogWrite(blueChannel, 0);
+  delay(100);
 
 }//end void loop
 
