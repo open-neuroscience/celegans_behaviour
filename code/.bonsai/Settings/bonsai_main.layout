@@ -21,4 +21,23 @@
       <IplImageVisualizer />
     </VisualizerSettings>
   </WindowSettings>
+  <WindowSettings Index="8">
+    <Location>
+      <X>1116</X>
+      <Y>208</Y>
+    </Location>
+    <Size>
+      <Width>408</Width>
+      <Height>274</Height>
+    </Size>
+    <VisualizerTypeName>Bonsai.Design.Visualizers.TimeSeriesVisualizer</VisualizerTypeName>
+    <VisualizerSettings>
+      <TimeSeriesVisualizer>
+        <Capacity>640</Capacity>
+        <Min>0</Min>
+        <Max>1.1</Max>
+        <AutoScale>true</AutoScale>
+      </TimeSeriesVisualizer>
+    </VisualizerSettings>
+  </WindowSettings>
 </VisualizerLayout>
